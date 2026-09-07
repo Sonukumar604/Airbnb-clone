@@ -1,12 +1,14 @@
 package com.AirbnbProject.airBnbApp.entity;
 
+
+import com.AirbnbProject.airBnbApp.entity.enums.BookingStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.catalina.User;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
+import com.AirbnbProject.airBnbApp.entity.User;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
