@@ -4,6 +4,7 @@ package com.AirbnbProject.airBnbApp.service;
 import com.AirbnbProject.airBnbApp.dto.HotelDto;
 import com.AirbnbProject.airBnbApp.entity.Hotel;
 import com.AirbnbProject.airBnbApp.entity.Room;
+import com.AirbnbProject.airBnbApp.exception.ResourceNotFoundException;
 import com.AirbnbProject.airBnbApp.repository.HotelRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
