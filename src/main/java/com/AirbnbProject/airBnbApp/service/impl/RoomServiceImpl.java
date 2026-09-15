@@ -1,4 +1,4 @@
-package com.AirbnbProject.airBnbApp.service;
+package com.AirbnbProject.airBnbApp.service.impl;
 
 import com.AirbnbProject.airBnbApp.dto.RoomDto;
 import com.AirbnbProject.airBnbApp.entity.Hotel;
@@ -6,6 +6,8 @@ import com.AirbnbProject.airBnbApp.entity.Room;
 import com.AirbnbProject.airBnbApp.exception.ResourceNotFoundException;
 import com.AirbnbProject.airBnbApp.repository.HotelRepository;
 import com.AirbnbProject.airBnbApp.repository.RoomRepository;
+import com.AirbnbProject.airBnbApp.service.InventoryService;
+import com.AirbnbProject.airBnbApp.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -18,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class RoomServiceImpl implements RoomService{
+public class RoomServiceImpl implements RoomService {
 
     private final RoomRepository roomRepository;
     private final HotelRepository hotelRepository;
@@ -71,7 +73,7 @@ public class RoomServiceImpl implements RoomService{
         Room room = roomRepository
                 .findById(roomId)
                 .orElseThrow(() -> new ResourceNotFoundException("Room not found with ID: "+roomId));
-        inventoryService.deleteFutureInventories(room);
+        inventoryService.deleteAllInventories(room);
         roomRepository.deleteById(roomId);
     }
 }

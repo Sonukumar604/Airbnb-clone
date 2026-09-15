@@ -1,12 +1,16 @@
-package com.AirbnbProject.airBnbApp.service;
+package com.AirbnbProject.airBnbApp.service.impl;
 
 
 import com.AirbnbProject.airBnbApp.dto.HotelDto;
+import com.AirbnbProject.airBnbApp.dto.HotelInfoDto;
 import com.AirbnbProject.airBnbApp.dto.RoomDto;
 import com.AirbnbProject.airBnbApp.entity.Hotel;
 import com.AirbnbProject.airBnbApp.entity.Room;
 import com.AirbnbProject.airBnbApp.exception.ResourceNotFoundException;
 import com.AirbnbProject.airBnbApp.repository.HotelRepository;
+import com.AirbnbProject.airBnbApp.repository.RoomRepository;
+import com.AirbnbProject.airBnbApp.service.HotelService;
+import com.AirbnbProject.airBnbApp.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -14,12 +18,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class HotelServiceImpl implements HotelService{
+public class HotelServiceImpl implements HotelService {
 
     private final HotelRepository hotelRepository;
     private final ModelMapper modelMapper;
