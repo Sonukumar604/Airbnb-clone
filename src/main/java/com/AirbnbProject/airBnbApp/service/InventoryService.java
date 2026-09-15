@@ -8,4 +8,5 @@ public interface InventoryService {
 
     void deleteFutureInventories(Room room);
 
+    void deleteAllInventories(Room room);
 }

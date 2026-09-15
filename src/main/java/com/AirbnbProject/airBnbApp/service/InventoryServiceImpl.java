@@ -42,4 +42,9 @@ public class InventoryServiceImpl implements InventoryService{
 
         inventoryRepository.deleteByRoom( room);
     }
+
+    @Override
+    public void deleteAllInventories(Room room) {
+        inventoryRepository.deleteByRoom( room);
+    }
 }
