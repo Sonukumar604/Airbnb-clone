@@ -1,10 +1,15 @@
 package com.AirbnbProject.airBnbApp.dto;
 
-import com.codingshuttle.projects.airBnbApp.entity.User;
-import com.codingshuttle.projects.airBnbApp.entity.enums.Gender;
+
+import com.AirbnbProject.airBnbApp.entity.User;
+import com.AirbnbProject.airBnbApp.entity.enums.Gender;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+
 public class GuestDto {
     private Long id;
     private User user;
