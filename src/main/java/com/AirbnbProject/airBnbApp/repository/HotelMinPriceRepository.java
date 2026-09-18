@@ -1,4 +1,5 @@
 package com.AirbnbProject.airBnbApp.repository;
+import com.AirbnbProject.airBnbApp.dto.HotelPriceDto;
 import com.AirbnbProject.airBnbApp.entity.Hotel;
 import com.AirbnbProject.airBnbApp.entity.HotelMinPrice;
 import org.springframework.data.domain.Page;
